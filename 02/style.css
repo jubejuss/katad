@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@800&display=swap");
+
+:root {
+    --thread-line-width: 1px;
+    --thread-line-color: #4c596b;
+	--img-radius:3rem;
+	--thread-corner: calc(var(--img-radius) / 3);
+	--thread-corner-height: calc(var(--img-radius) / 2);
+	--thread-step: calc(var(--img-radius) / 3 + var(--img-radius) / 2);
+	/* --thread-step: calc(var(--img-radius) / 1.27); */
+    /* --thread-step: 2.35rem; */
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    min-height: 100vh;
+    background: #0b121e;
+    color: hsla(360, 100%, 100%, 0.9);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+p {
+    margin: 0.25rem 0 0.5rem;
+}
+
+main {
+    max-width: 100%;
+    width: 40rem;
+    background: hsla(360, 100%, 100%, 0.05);
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid hsla(360, 100%, 100%, 0.2);
+    box-shadow: 0 0 8rem hsla(360, 100%, 100%, 0.2);
+}
+
+main > header {
+    margin: 1rem 0 2rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex: 1;
+    min-width: 15rem;
+    background: hsla(360, 100%, 100%, 0.1);
+    border: 1px solid var(--thread-line-color);
+}
+
+.card header {
+    display: flex;
+    gap: 1rem;
+}
+
+.namedate {
+    display: flex;
+    align-items: baseline;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: hsla(360, 100%, 100%, 0.5);
+}
+
+.date:before {
+    content: "•";
+    margin: 0 0.5rem;
+}
+.post-img {
+    width: 3rem;
+    height: 3rem;
+}
+
+img {
+    width: var(--img-radius);
+    height: var(--img-radius);
+    border-radius: 100px;
+    border: 1px solid var(--thread-line-color);
+    box-sizing: border-box;
+}
+
+.thread-corner {
+    width: var(--thread-corner);
+    border-width: 0 0 1px 1px;
+    height: var(--thread-corner-height);
+    border-style: solid;
+    border-color: var(--thread-line-color);
+    border-radius: 0px 0px 0px 16px;
+    margin-left: -1px;
+}
+
+.thread > .comment-block > .comment-card:first-child {
+    padding-top: 2rem;
+}
+
+.comment-block {
+    padding-left: var(--thread-step);
+}
+
+.thread > .comment-block {
+    padding-right: var(--thread-step);
+}
+
+.comment {
+    margin-left: 1rem;
+    flex: 1;
+}
+
+.comment-row {
+    position: relative;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.comment-card {
+    position: relative;
+}
+
+.comment-row:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--thread-line-width);
+    background-color: var(--thread-line-color);
+    top: 0;
+    left: calc(-1 * var(--thread-line-width));
+    bottom: 0;
+    z-index: -1;
+}
+
+.comment-block > .comment-card:last-child > .comment-row:before {
+    width: 0;
+}
+
+.comment-card:has(> .comment-block) > .comment-row:before {
+    left: calc(var(--thread-step) - var(--thread-line-width));
+}
+
+.comment-card:before {
+    content: "";
+    width: 1px;
+    background: var(--thread-line-color);
+    display: block;
+    top: 0;
+    left: -1px;
+    border: 0;
+    height: 100% !important;
+    position: absolute;
+}
+
+.comment-card:last-child:before {
+    width: 0;
+}
+
+.social {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    color: #9e9e9e;
+    gap: 1rem;
+}
+
+.social > div {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+	cursor: pointer;;
+}
+.social > div:hover {
+	color: white;
+}
+.social > div:active {
+	color: rgb(73, 73, 73);
+}
