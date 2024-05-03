@@ -67,3 +67,7 @@ img {
 .fourth {
 	display: none;
 }
+
+.card:last-child:nth-child(odd) .content {
+	padding-left: 4rem;
+}
