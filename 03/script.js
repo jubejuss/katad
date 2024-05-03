@@ -1,8 +1,8 @@
 // Seemnete andmed
 const seeds = [
-  { name: "Carrot", cost: 10, growthTime: 5, profit: 20, icon: "img/porgand.png" },
-  { name: "Tomato", cost: 15, growthTime: 7, profit: 30, icon: "img/tomat.png" },
-  { name: "Potato", cost: 20, growthTime: 9, profit: 40, icon: "img/kartul.png" }
+  { name: "Carrot", cost: 10, growthTime: 15, profit: 20, icon: "img/porgand.png" },
+  { name: "Tomato", cost: 15, growthTime: 21, profit: 30, icon: "img/tomat.png" },
+  { name: "Potato", cost: 20, growthTime: 29, profit: 40, icon: "img/kartul.png" }
 ];
 
 // Algse raha määratlemine
@@ -40,7 +40,7 @@ function startGrowthTimer(square, seed) {
   const timerId = setInterval(() => {
     const elapsedTime = Math.floor((Date.now() - parseInt(square.dataset.plantedAt)) / 1000);
     const remainingTime = Math.max(0, seed.growthTime - elapsedTime);
-    const scale = 1 + (elapsedTime / seed.growthTime) * 1;  // Suuruse skaleerimise loogika
+    const scale = 1 + (elapsedTime / seed.growthTime) * 0.8;  // Suuruse skaleerimise loogika
 let img = square.querySelector('img');
 img.style.width = `${30 * scale}px`;
 img.style.height = `${30 * scale}px`;
