@@ -58,11 +58,7 @@ function plantSeed(squareId, seedIndex) {
   const square = document.getElementById(squareId);
   const seed = seeds[seedIndex];
   if (money < seed.cost) {
-    showAlert("Not enough money to plant this seed!");
-    return;
-  }
-  if (square.classList.contains("planted")) {
-    showAlert("This square is already planted!");
+    showAlert("Heh, sul pole ju raha nii palju! Oota pisut.");
     return;
   }
   square.innerHTML = `${renderIcon(seed, 1)}<span class="timer">${seed.growthTime}</span>`;
@@ -126,7 +122,7 @@ function setupEventListeners() {
   document.querySelectorAll('.square').forEach(square => {
     square.addEventListener("click", function() {
       if (!this.classList.contains("planted") && !this.classList.contains("harvestable")) {
-        showModal("Choose a seed:");
+        showModal("Vali seeme:");
         currentSquareId = this.id; // Store the current square's id
       } else if (this.classList.contains("harvestable")) {
         harvest(this);
