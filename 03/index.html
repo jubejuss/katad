@@ -26,6 +26,26 @@
     <h2>Raha: <span id="money">100</span></h2>
   </div>
 </div>
+
+<div id="customAlert" class="alert-hidden">
+  <div class="alert-content">
+    <button class="close-button" onclick="closeAlert()">&times;</button>
+    <span id="alertText">message</span>
+  </div>
+</div>
+
+<div id="customModal" class="modal">
+  <div class="modal-content">
+    <button class="close-button" onclick="closeModal()">&times;</button>
+    <h3 id="modalTitle">Message</h3>
+    <div id="modalButtons">
+      <button data-seed="0"><img src="./img/porgand.png" alt="porgandi nupp">Porgand 10€</button>
+      <button data-seed="1"><img src="./img/tomat.png" alt="tomati nupp">Tomat 15€</button>
+      <button data-seed="2"><img src="./img/kartul.png" alt="kartulinupp">Kartul 20€</button>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
