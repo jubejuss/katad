@@ -46,6 +46,7 @@ h3 {
     max-width: 100%;
     margin: 0 auto;
     text-align: left;
+    overflow: hidden;
 }
 
 .field {
@@ -126,7 +127,7 @@ span.icon {
   .alert-content {
     background-color: #120b0aa8;
     margin: 318px auto;
-    padding: 40px 64px;
+    padding: 56px 64px 40px;
     width: fit-content;
     max-width: 100%;
     border-radius: 8px;
@@ -152,8 +153,8 @@ span.icon {
   
   .modal-content {
     background-color: #120b0aa8;
-    margin: 318px auto;
-    padding: 40px 64px;
+    margin: 260px auto;
+    padding: 40px 40px;
     width: fit-content;
     max-width: 100%;
     border-radius: 8px;
