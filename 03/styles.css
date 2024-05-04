@@ -19,10 +19,17 @@ body {
     box-sizing: border-box;
     margin: 0;
 }
+header {
+    padding: 0 12px;
+}
 h1 {
     font-size: clamp(38px, 5vw, 48px);
     font-weight: 900;
     margin: 0;
+    hyphens: manual;
+}
+.hud h2 {
+    margin-left: 8px;
 }
 h3 {
     font-size: 24px;
