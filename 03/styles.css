@@ -15,6 +15,9 @@ body {
     text-align: center;
     color: wheat;
     padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 h1 {
     font-size: 48px;
@@ -28,8 +31,12 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 111px;
+    top: 320px;
+    right: 0;
+    left: 0;
+    position: absolute;
     width: 595px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
 }
@@ -114,6 +121,7 @@ span.icon {
     margin: 318px auto;
     padding: 40px 64px;
     width: fit-content;
+    max-width: 100%;
     border-radius: 8px;
     border: 1px solid wheat;
     position: relative;
@@ -140,6 +148,7 @@ span.icon {
     margin: 318px auto;
     padding: 40px 64px;
     width: fit-content;
+    max-width: 100%;
     border-radius: 8px;
     border: 1px solid wheat;
     position: relative;
